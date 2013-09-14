@@ -1,0 +1,11 @@
+<h1>Listing Users</h1>
+
+<!--are my folders and code in the right place?-->
+
+<form action="/posts" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="text" name="first_name" placeholder="First Name" /><br />
+  <input type="text" name="last_name" placeholder="Last Name" /><br />
+  <textarea name="content"></textarea><br />
+  <input type="submit" value="Submit" /><br />
+</form>

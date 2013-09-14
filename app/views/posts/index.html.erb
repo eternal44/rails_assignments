@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<form action="/posts" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="text" name="name" placeholder="name" /><br />
+  <input type="text" name="content" placeholder="content" /><br />
+  <textarea name="content"></textarea><br />
+  <input id="submit" type="submit" value="Submit a comment" /><br />
+</form>
+

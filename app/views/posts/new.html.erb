@@ -1,0 +1,11 @@
+<h1>Posts</h1>
+
+<!--are my folders and code in the right place?-->
+
+<form action="/posts" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="text" name="title" placeholder="Title" /><br />
+  <input type="text" name="content" placeholder="Content" /><br />
+  <textarea name="content"></textarea><br />
+  <input type="submit" value="Submit" /><br />
+</form>
