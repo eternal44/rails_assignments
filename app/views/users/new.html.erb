@@ -1,12 +1,13 @@
 <h1>Listing Users</h1>
 
-<form action="/users" method="post">
+<form action="/users" class="new_user" id="new_user" method="post">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-  <input type="text" name="client[first_name]" placeholder="First Name" /><br />
-  <input type="text" name="client[last_name]" placeholder="Last Name" /><br />
-  <input type="text" name="client[email_address]" placeholder="Email" /><br />
-  <input type="text" name="client[password]" placeholder="Password" /><br />
+  <input type="text" id="user_first_name" name="user[first_name]" placeholder="First Name" /><br />
+  <input type="text" id="user_last_name" name="user[last_name]" placeholder="Last Name" /><br />
+  <input type="text" id="user_email_address" name="user[email_address]" placeholder="Email" /><br />
+  <input type="password" id="user_password" name="user[password]" placeholder="Password" /><br />
 
   <input type="submit" value="Submit" /><br /><!--routes to create.html.erb... why?-->
 </form>
 
+<a href="/users">Back</a>

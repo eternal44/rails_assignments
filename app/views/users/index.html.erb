@@ -1,25 +1,31 @@
-<div class="hero-unit well">
-	<h1>Users</h1>
-</div>
-
-
-
-
+<h1>Listing users</h1>
+<div class="row">
+<div class="span9">
 <table class="table well">
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Last Name</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
-<% @users.each do |user| %>
-<tr>
-  <td><%= user.first_name %></td>
-  <td><%= user.last_name %></td>
-  <td><%= user.email_address %></td>
 
-</tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.email_address %></td>
+    <td><%= user.password %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+  </tr>
 <% end %>
 </table>
-
-<%= link_to 'Create New User', new_user_path%>
-
+</div><!--/.span4-->
+</div><!--/.row-->
+<br />
+<%= link_to 'New User', new_user_path %>

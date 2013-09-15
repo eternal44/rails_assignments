@@ -2,11 +2,14 @@
 <html>
 <head>
   <title>CVPractice</title>
-  <%= stylesheet_link_tag    "users" %>
-  <%= javascript_include_tag "users" %>
+  <%= stylesheet_link_tag    "users", "application"%>
+  <%= javascript_include_tag "users", "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% flash.each do |key, value| %>
+	<p><%= value %></p>
+<% end %>
 
 <%= yield %>
 
